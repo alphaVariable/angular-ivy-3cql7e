@@ -7,7 +7,7 @@ import { ApicallerService } from '../apicaller.service';
   styleUrls: ['./component1.component.css'],
 })
 export class Component1Component implements OnInit {
-  apiresponse: any = {};
+  apiresponse: any;
   constructor(private _apicaller: ApicallerService) {}
 
   ngOnInit(): void {
