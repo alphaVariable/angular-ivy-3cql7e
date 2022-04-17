@@ -8,6 +8,7 @@ import { ApicallerService } from '../apicaller.service';
 })
 export class Component1Component implements OnInit {
 
+  apiresponse: any = {};
   constructor(
     private _apicaller: ApicallerService
   ) { }
@@ -16,7 +17,7 @@ export class Component1Component implements OnInit {
     // get data from api using service
     this._apicaller.getData().subscribe(
       (data) => {
-        console.log(data);
+        this.apiresponse = data;
       }
     );
   }

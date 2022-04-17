@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApicallerService } from '../apicaller.service';
 
 @Component({
   selector: 'app-component2',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Component2Component implements OnInit {
 
-  constructor() { }
+  apiresponse: any = {};
+  constructor(
+    private _apicaller: ApicallerService
+  ) { }
 
   ngOnInit(): void {
+    // get data from api using service
+    this._apicaller.getData().subscribe(
+      (data) => {
+        this.apiresponse = data;
+      }
+    );
   }
 
 }

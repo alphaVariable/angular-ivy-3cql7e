@@ -10,7 +10,7 @@ export class ApicallerService {
 
   // get data from swapi.dev
   getData() {
-    console.log(Math.random() * 100 +'getData()');
+    console.log(Math.random() * 100 +' getData()');
     return this._http.get('https://swapi.dev/api/people/');
   }
 }
