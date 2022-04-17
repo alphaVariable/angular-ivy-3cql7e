@@ -12,7 +12,8 @@ export class ApicallerService {
 
   // get data from swapi.dev
   getData() {
-    console.log(Math.random() * 100 +' getData()');
+    console.log('RequestID:'+Math.random() * 100 + ' getData()');
+    // count api request
     // return as array of objects
     return this._http.get('https://swapi.dev/api/people/').pipe(
       map(result => result['results'])
