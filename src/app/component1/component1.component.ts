@@ -8,7 +8,7 @@ import { ApicallerService } from '../apicaller.service';
 })
 export class Component1Component implements OnInit {
   apiresponse: any;
-  editTheRes: any;
+  editRes: any;
   constructor(private _apicaller: ApicallerService) {}
 
   ngOnInit(): void {
@@ -24,6 +24,6 @@ export class Component1Component implements OnInit {
   }
 
   editTheRes() {
-    this._apicaller.editRes(this.editTheRes);
+    this._apicaller.editRes(this.editRes);
   }
 }
