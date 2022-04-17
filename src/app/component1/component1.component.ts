@@ -12,7 +12,8 @@ export class Component1Component implements OnInit {
 
   ngOnInit(): void {
     // get data from api using service
-    this._apicaller.getData().subscribe((data: any[]) => {
+    this._apicaller.getData().subscribe(
+      (data: any[]) => {
       this.apiresponse = data;
     });
   }
